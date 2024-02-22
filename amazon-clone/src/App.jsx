@@ -27,6 +27,7 @@ function App() {
       </div>
       <p className="read-the-docs">
         Testing github
+        new branch test
       </p>
     </>
   )
