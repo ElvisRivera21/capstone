@@ -18,20 +18,24 @@ body{
 
 .pic-container{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 10px; /* Adjust the gap between images */
-  align-items: center;
   justify-content: center;
-  width: 200px; /* Or specific size */
-  height: 200px; /* Or specific size */
-  display: flex;
-  float: left;
+  align-items: center;
+  width: 100%; /* Adjust based on your preference */
+  max-width: 600px; /* Maximum width of the container */
+  margin: auto; /* Center the container */
 }
-#Groceries{
-  width: 100px;
-  height: 100px;
-  align-content: center;
+
+.pic-item{
+  text-align: center; /* Center the text */
+}
+
+.pic-item img{
+  width: 100%; /* Adjust image width */
+  max-width: 250px; /* Maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without losing aspect ratio */
 }
 
 
