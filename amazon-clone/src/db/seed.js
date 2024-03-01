@@ -1,19 +1,15 @@
 // Using dynamic import for 'pg' module because static import might not directly work
-import pg from 'pg';
-const { Pool } = pg;
-
-const pool = new Pool({
-  user: 'lucianolawson',
-  host: 'localhost',
-  database: 'amazon',
-  password: 'randompassword',
-  port: 5432,
+const { Pool } = require("pg");
+const db = new Pool({
+  connectionString:
+    process.env.DATABASE_URL ||
+    "postgres://localhost:5432/amazon",
 });
 
 const seed = async () => {
   try {
     // Products
-    await pool.query(`
+    await db.query(`
       INSERT INTO products (name, description, price, stock)
       VALUES
       ('Product 1', 'Description for product 1', 10.00, 100),
@@ -22,7 +18,7 @@ const seed = async () => {
     `);
 
     // Users
-    await pool.query(`
+    await db.query(`
       INSERT INTO users (username, password, email)
       VALUES
       ('user1', 'password1', 'user1@example.com'),
@@ -30,7 +26,7 @@ const seed = async () => {
     `);
 
     // Cart Items
-    await pool.query(`
+    await db.query(`
       INSERT INTO cart_items (user_id, product_id, quantity)
       VALUES
       (1, 1, 1),
@@ -42,7 +38,7 @@ const seed = async () => {
   } catch (err) {
     console.error('Error seeding database:', err);
   } finally {
-    await pool.end();
+    await db.end();
   }
 };
 
