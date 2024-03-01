@@ -10,7 +10,7 @@ async function main() {
     [...Array(5)].map(() =>
       prisma.user.create({
         data: {
-          username: faker.internet.userName(),
+          email: faker.internet.userEmail(),
           password: faker.internet.password(),
         },
       })
