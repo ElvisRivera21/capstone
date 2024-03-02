@@ -1,7 +1,10 @@
-const express = require('express');
-const jwt = require('jsonwebtoken');
+import express from 'express';
+import jwt from 'jsonwebtoken';
+import crypto from 'crypto'; // Import crypto module
+
+
 const app = express();
-const crypto = require('crypto');//import crypto module
+
 app.use(express.json());
 
 //Server code
