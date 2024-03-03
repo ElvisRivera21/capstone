@@ -62,12 +62,32 @@ app.post("/signup", (req, res) => {
 });
 
 
-
-
-
 // POST /login: Logging in
 app.post("/login", (req, res) => {
-    // Implementation for logging in
+    const { username, password } = req.body;
+
+    //Example user data (for demonstration purposes)
+
+    if (username === "sandrawill" && password === "sandrawill") {
+        //User authenticated successfully
+        const user = {
+            username: "sandrawill",
+            email: "sandrawill@example.com",
+            age: 20,
+            firstName: "Sandra",
+            lastName: "William",
+            password: "sandrawill",
+        };
+
+        //Generate a new token for the authenticated user
+        const token = jwt.sign(user, secretKey, { expiresIn: "1h" }); //Token expires in 1 hour)
+
+        //Send token back to the client
+        res.json({ status: true, token: token });
+    } else {
+        //User authentication failed
+        res.status(401).json({ status: false, message: "Invalid credentials" });
+    }
 });
 
 // GET /user: Retrieving a user’s profile (restricted to the user themselves)
