@@ -11,10 +11,10 @@ app.use(express.json());
 //Database connection for registration
 const connectionOptions = {
     host: 'localhost',
-    port: 3000,
+    port: 5432,
     database: 'amazonCloneRegistrationdb',
-    user: 'username',
-    password: 'password'
+    user: 'postgres',
+    password: 'password',
 };
 
 //Establishing a connection to the database
