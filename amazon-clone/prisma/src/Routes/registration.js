@@ -1,11 +1,30 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto'; // Import crypto module
-
+import pgp from 'pg-promise'; // Import pgp module for POSTgreSQL
 
 const app = express();
+const db = pgp();// Create a new instance of the pgp module
 
 app.use(express.json());
+
+//Database connection for registration
+const connectionOptions = {
+    host: 'localhost',
+    port: 3000,
+    database: 'amazonCloneRegistrationdb',
+    user: 'username',
+    password: 'password'
+};
+
+//Establishing a connection to the database
+db.connect(connectionOptions)
+    .then(() => {
+        console.log('Connected to database');
+    })
+    .catch(error => {
+        console.error('Error connecting to database:', error);
+    });
 
 //Server code
 const PORT = process.env.PORT || 3000;
