@@ -1,5 +1,14 @@
-const { PrismaClient } = require("@prisma/client");
+import pgPromise from 'pg-promise';
 
-const prisma = new PrismaClient();
+const pgp = pgPromise({});
+const dbConfig = {
+    host: 'localhost',
+    port: 5432,
+    database: 'amazon',
+    user: 'lucianolawson',
+    password: 'randompassword',
+};
 
-module.exports = prisma;
+const db = pgp(dbConfig);
+
+export default db;
