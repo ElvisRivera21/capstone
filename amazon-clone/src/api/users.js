@@ -11,7 +11,7 @@ router.use((req, res, next) => {
 });
 
 // Get all users
-router.get("/", async (req, res, next) => {
+router.get("/users", async (req, res, next) => {
   try {
     const user = await prisma.user.findMany({
       orderBy: {
@@ -25,7 +25,7 @@ router.get("/", async (req, res, next) => {
 });
 
 // Get a user by id
-router.get("/:id", async (req, res, next) => {
+router.get("/users/:id", async (req, res, next) => {
   try {
     const userId = req.params.id;
 
