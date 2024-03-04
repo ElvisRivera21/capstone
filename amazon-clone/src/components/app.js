@@ -1,13 +1,18 @@
 import express from 'express';
-import usersRouter from './Routes/users';
+import path from 'path';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5432;
 
-app.use(express.json());
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Use the users router
+import usersRouter from './config/Routes/users';
 app.use("/users", usersRouter);
+
+// Serve static files from 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

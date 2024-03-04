@@ -1,6 +1,7 @@
 import './App.css'
-import './nav/login'
-import './nav/register'
+import '../config/nav/login'
+import '../config/nav/register'
+import '../db/index'
 
 function App() {
 
