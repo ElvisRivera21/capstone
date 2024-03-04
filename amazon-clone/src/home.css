@@ -136,8 +136,8 @@ nav{
 }
 
 h2 {
-    text-align: center; /* This centers the "Deals of the Day" heading */
-    width: 100%; /* Ensures it takes the full width of its container */
+    text-align: center; 
+    width: 100%; 
   }
 
   .header-slider {
@@ -145,20 +145,20 @@ h2 {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    /* Additional styles as needed */
+   
   }
   .deals-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Adjust to flex-start or center */
+    justify-content: flex-start; 
 }
 
 .deal {
-    width: calc(25% - 5px); /* Adjust width and margins as needed */
-    margin-bottom: 30px; /* Adjust margin between deals */
-    background-color: #f9f9f9; /* Add background color for clarity */
-    padding: 40px; /* Adjust padding within each deal */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    width: calc(25% - 5px); 
+    margin-bottom: 30px; 
+    background-color: #f9f9f9;
+    padding: 40px; 
+    border-radius: 5px; 
 }
 
 .deal img {
@@ -167,7 +167,7 @@ h2 {
 }
 
 .deal h3, .deal p {
-    margin: 5px 0; /* Reduce margin for tighter spacing */
+    margin: 5px 0; 
 }
 
 .deal a {
