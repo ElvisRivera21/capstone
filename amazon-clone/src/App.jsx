@@ -1,15 +1,21 @@
-import './App.css'
-import './nav/login'
-import './nav/register'
+document.getElementById("search-input").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+      event.preventDefault(); 
 
-function App() {
+      var query = document.getElementById("search-input").value;
 
-  return (
-    <>
 
-    </>
-  )
-}
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "search.php?q=" + encodeURIComponent(query), true);
+      xhr.onload = function() {
+          if (xhr.status == 200) {
+              
+              document.getElementById("search-results").innerHTML = xhr.responseText;
+          }
+      };
+      xhr.send();
+  }
+});
 
-export default App
-    
+
+
