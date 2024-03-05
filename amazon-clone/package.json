@@ -33,7 +33,7 @@
     "vite": "^5.1.4"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "index.js",
+  "main": "index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ElvisRivera21/capstone.git"
