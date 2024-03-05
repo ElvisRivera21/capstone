@@ -7,6 +7,7 @@ import HomeImprovements from './pages/homeImprovements';
 import Kids from './pages/kids';
 import Medical from './pages/medical';
 import Womens from './pages/womens';
+import Account from './pages/yourAccount';
 
 function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ function AppRoutes() {
         <Route path="/kids" element={<Kids />} />
         <Route path="/medical" element={<Medical />} />
         <Route path="/womens" element={<Womens />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
     </Router>
   );
