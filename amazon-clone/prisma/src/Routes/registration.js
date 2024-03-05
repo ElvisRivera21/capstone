@@ -1,3 +1,5 @@
+
+/** 
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto'; // Import crypto module
@@ -132,4 +134,4 @@ app.patch("/user/change-role/:userId", (req, res) => {
 // DELETE /user/:userId: Deleting a user (restricted to admins)
 app.delete("/user/:userId", (req, res) => {
     // Implementation to delete user (restricted to admins)
-});
+});*/
