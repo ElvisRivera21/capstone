@@ -1,73 +1,75 @@
+import { useHistory } from 'react-router-dom';
+import '../styles/youraccount.css';
+import smileyImage from '../../public/smiley.svg'; 
 
+function Account() {
+  let history = useHistory();
 
-function account() {
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    history.push('/home');
+  };
+
+  const handleCreateAccount = (e) => {
+    e.preventDefault();
+    // Navigate to account creation page
+    history.push('/create-account');
+  };
+
+  // Handler for navigating back to the home page
+  const handleBackToHome = () => {
+    history.push('/');
+  };
+
   return (
-    <>
-      <html>
-        <head>
-          <meta charset="utf-8" />
-          <title>Smiley Sign In</title>
-          <link rel="stylesheet" href="./youraccount.css" />
-        </head>
-        <body>
-          <img src="../assets/smiley.svg" width="200px" alt="Amazon.com" />
+    <div>
+      <img src={smileyImage} width="200px" alt="Smiley Logo" />
 
-          <div id="signInBorder">
-            <p id="SignInTxt">Sign in</p>
+      <div id="signInBorder">
+        <p id="SignInTxt">Sign in</p>
 
-            <label>
-              <strong>Email (phone for mobile accounts)</strong>
-              <br />
-              <input type="email" name="email" value="" />
-            </label>
-
+        <form onSubmit={handleSignIn}>
+          <label>
+            <strong>Email (phone for mobile accounts)</strong>
             <br />
+            <input type="email" name="email" required />
+          </label>
+          <br />
 
-            <label>
-              <strong>Password</strong>
-              <span>
-                <a href="#" id="password">Forgot your password?</a>
-              </span>
-              <br />
-              <input type="password" name="password" value="" />
-            </label>
+          <label>
+            <strong>Password</strong>
+            <span><a href="#" id="password">Forgot your password?</a></span>
+            <br />
+            <input type="password" name="password" required />
+          </label>
+          <br />
 
-            <div>
-              <a href="/home.html">
-                <button id="smiley">Sign in</button>
-              </a>
-            </div>
+          <button type="submit" id="smiley">Sign in</button>
+        </form>
 
-            <div id="createAccount">
-              <h2>
-                <span>New to Smiley?</span>
-              </h2>
-              <button id="newAccount" name="newAcct">
-                Create your Smiley account
-              </button>
-            </div>
-          </div>
+        <div id="createAccount">
+          <h2><span>New to Smiley?</span></h2>
+          <button id="newAccount" name="newAcct" onClick={handleCreateAccount}>
+            Create your Smiley account
+          </button>
+        </div>
 
-          <hr id="footer" />
+        {/* New Back to Home button */}
+        <button onClick={handleBackToHome} style={{marginTop: "20px"}}>Back to Home</button>
+      </div>
 
-          <div className="extra">
-            <p className="links">
-              <a href="#" id="first">
-                Conditions of Use
-              </a>{' '}
-              <a href="#">Notice of Use</a> <a href="#">Help</a>
-            </p>
-            <p className="links" id="special">
-              © 2023-2024
-            </p>
-          </div>
+      <hr id="footer" />
 
-          <script src="/src/db/login.js" />
-          <script type="module" src="/src/main.jsx" />
-        </body>
-      </html>
-    </>
+      <div className="extra">
+        <p className="links">
+          <a href="#" id="first">Conditions of Use</a>
+          <a href="#">Notice of Use</a>
+          <a href="#">Help</a>
+        </p>
+        <p className="links" id="special">© 2023-2024</p>
+      </div>
+    </div>
   );
 }
 
-export default account;
+export default Account;
