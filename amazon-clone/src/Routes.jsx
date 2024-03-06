@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Cart from './pages/cart';
-import Clothing from './pages/clothing';
-import Groceries from './pages/groceries';
-import Home from './pages/home';
-import HomeImprovements from './pages/homeImprovements';
-import Kids from './pages/kids';
-import Medical from './pages/medical';
-import Womens from './pages/womens';
-import Account from './pages/yourAccount';
+import Cart from './pages/cart.jsx';
+import Clothing from './pages/clothing.jsx';
+import Groceries from './pages/groceries.jsx';
+import Home from './pages/home.jsx';
+import HomeImprovements from './pages/homeImprovements.jsx';
+import Kids from './pages/kids.jsx';
+import Medical from './pages/medical.jsx';
+import Womens from './pages/womens.jsx';
+import Account from './pages/youraccount.jsx';
 
 function AppRoutes() {
   return (
