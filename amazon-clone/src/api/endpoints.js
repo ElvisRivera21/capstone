@@ -12,4 +12,3 @@ export const AUTH_ENDPOINTS = {
     profile: `${API_BASE_URL}/user/account`,
     settings: `${API_BASE_URL}/user/settings`,
   };
-  
