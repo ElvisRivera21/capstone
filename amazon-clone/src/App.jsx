@@ -1,4 +1,7 @@
 
+import './App.css'
+import './nav/login'
+import './nav/register'
 import AppRoutes from './Routes';
 
 function App() {
@@ -10,3 +13,4 @@ function App() {
 }
 
 export default App;
+
