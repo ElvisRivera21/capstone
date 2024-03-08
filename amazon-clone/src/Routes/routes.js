@@ -7,9 +7,6 @@ import pgp from 'pg-promise';
 const app = express();
 app.use(express.json());
 
-//JSON middleware
-app.use(express.json());
-
 // Database connection options
 const connectionOptions = {
     host: 'localhost',
@@ -19,8 +16,11 @@ const connectionOptions = {
     password: 'password',
 };
 
+// Create a PostgreSQL database instance
+const dbInstance = pgp(connectionOptions);
+
 // Establish connection to the database
-db.connect(connectionOptions)
+dbInstance.connect()
     .then(() => {
         console.log('Connected to database');
     })
@@ -30,9 +30,10 @@ db.connect(connectionOptions)
 
 // POST /signup: Registering a new user
 app.post("/signup", async (req, res) => {
-    // Implementation to register a new user
+    const { username, password } = req.body;
     try {
-        await db.connectToDB();
+        // Hash the password before storing it in the database
+        const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
         // Your signup logic here
     } catch (error) {
         console.error('Error signing up:', error);
@@ -42,18 +43,25 @@ app.post("/signup", async (req, res) => {
 
 // POST /login: Logging in
 app.post("/login", async (req, res) => {
-    // Implementation to login
     const { username, password } = req.body;
 
     try {
-        //Querey to db to verify the user and password
-        const user = await db.oneOrNone('SELECT * FROM users WHERE username = $1 AND password = $2', [username, password]);
+        // Hash the password for comparison with the hashed password stored in the database
+        const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
+        // Query to verify the user and hashed password
+        const user = await dbInstance.oneOrNone('SELECT * FROM users WHERE username = $1 AND password = $2', [username, hashedPassword]);
 
-        //Send token to client
-        res.json({status: true, token: token });
-    } else {
-        //Invalid credentials, send 401 error
-        
+        if (user) {
+            // Generate token
+            const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET);
+            res.json({ status: true, token: token });
+        } else {
+            // Invalid credentials, send 401 error
+            res.status(401).json({ status: false, message: "Invalid credentials" });
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+        res.status(500).json({ status: false, message: "Internal server error" });
     }
 });
 
