@@ -12,13 +12,13 @@ const StaticAccountComponent = () => {
   const handleSignIn = (e) => {
     e.preventDefault();
     // Navigate to home page upon sign in
-    history.push('/home');
+    history.push('/');
   };
 
   const handleCreateAccount = (e) => {
     e.preventDefault();
     // Navigate to account creation page
-    history.push('/create-account');
+    history.push('/youraccount');
   };
 
   return (

@@ -7,13 +7,13 @@ function Account() {
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    history.push('/home');
+    history.push('/');
   };
 
   const handleCreateAccount = (e) => {
     e.preventDefault();
     // Navigate to account creation page
-    history.push('/create-account');
+    history.push('/youraccount');
   };
 
   // Handler for navigating back to the home page
@@ -24,7 +24,11 @@ function Account() {
   return (
     <div>
       <img src={smileyImage} width="200px" alt="Smiley Logo" />
-
+      <div className="nav-text">
+    <div className="account">
+        <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt="" /></h1>
+</div>
+</div>
       <div id="signInBorder">
         <p id="SignInTxt">Sign in</p>
 
