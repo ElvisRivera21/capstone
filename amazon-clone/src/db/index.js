@@ -1,3 +1,14 @@
+
+/* module.exports = {
+    ...require('./login'),
+    ...require('./signup'),
+    ...require('../api/index'),
+    ...require('../Routes/productRoutes')
+}
+
+ */
+
+
 import login from './login';
 import signup from './signup';
 import users from './users';
