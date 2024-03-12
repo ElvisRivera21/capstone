@@ -8,7 +8,12 @@ app.use(express.json());
 
 // POST /signup: Registering a new user
 app.post("/signup", async (req, res) => {
+    console.log(req.body); // Debugging: Log the request body
     const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).json({ status: false, message: "Username and password are required" });
+    }
+
     try {
         // Hash the password before storing it in the database
         const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
@@ -23,7 +28,12 @@ app.post("/signup", async (req, res) => {
 
 // POST /login: Logging in
 app.post("/login", async (req, res) => {
+    console.log(req.body); // Debugging: Log the request body
     const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).json({ status: false, message: "Username and password are required" });
+    }
+
     try {
         // Hash the password for comparison with the hashed password stored in the database
         const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
@@ -32,7 +42,7 @@ app.post("/login", async (req, res) => {
 
         if (user) {
             // Generate token
-            const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET);
+            const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET, { expiresIn: '1h' });
             res.json({ status: true, token });
         } else {
             // Invalid credentials, send 401 error
@@ -44,12 +54,5 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// Other routes
-
+// Export the app
 export default app;
-
-// Start the server if this file is run directly
-const startServer = () => {
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-  };
