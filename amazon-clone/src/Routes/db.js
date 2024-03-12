@@ -1,6 +1,6 @@
-import pgp from 'pg-promise';
+import pgPromise from 'pg-promise';
 
-const db = pgp();
+const pgp = pgPromise();
 
 const connectionOptions = {
     host: 'localhost',
@@ -10,13 +10,16 @@ const connectionOptions = {
     password: 'password',
 };
 
-export const connectToDB = async () => {
+const db = pgp(connectionOptions);
+
+export default db;
+
+
+/* export const connectToDB = async () => {
     try {
         await db.connect(connectionOptions);
         console.log('Connected to database');
     } catch (error) {
         console.error('Error connecting to database:', error);
     }
-};
-
-export default db;
+}; */
