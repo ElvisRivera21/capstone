@@ -3,7 +3,7 @@ import Cart from './pages/cart.jsx';
 import Clothing from './pages/clothing.jsx';
 import Groceries from './pages/groceries.jsx';
 import Home from './pages/home.jsx';
-import HomeImprovements from './pages/homeImprovements.jsx';
+import HomeImprovements from './pages/homeimprov.jsx';
 import Kids from './pages/kids.jsx';
 import Medical from './pages/medical.jsx';
 import Womens from './pages/womens.jsx';
