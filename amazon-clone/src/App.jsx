@@ -1,21 +1,17 @@
-document.getElementById("search-input").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-      event.preventDefault(); 
+import './App.css';
+import Login from './nav/login'; // Corrected import statement
+import RegistrationForm from './nav/register'; // Corrected import statement
+import AppRoutes from './Routes';
 
-      var query = document.getElementById("search-input").value;
+function App() {
+  return (
+    <div>
+      <AppRoutes />
+      {/* Assuming you want these outside the routing context, but typically you'd include these within specific routes */}
+      <RegistrationForm />
+      <Login />
+    </div>
+  );
+}
 
-
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", "search.php?q=" + encodeURIComponent(query), true);
-      xhr.onload = function() {
-          if (xhr.status == 200) {
-              
-              document.getElementById("search-results").innerHTML = xhr.responseText;
-          }
-      };
-      xhr.send();
-  }
-});
-
-
-
+export default App;
