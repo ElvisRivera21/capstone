@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "seed": "node src/db/seed.js",
-    "start": "node src/Routes/server.mjs"
+    "start": "node src/Routes/server.js"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
