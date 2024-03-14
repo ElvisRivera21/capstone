@@ -25,3 +25,4 @@ const loginUser = async (email, password) => {
     }
 };
 export default loginUser;
+
