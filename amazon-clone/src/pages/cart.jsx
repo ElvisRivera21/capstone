@@ -1,5 +1,6 @@
 import clothing from "./clothing";
-i
+
+
 // TODO: Tests for `addNewItem`
 describe("addNewItem", () => {
     let newItem;
