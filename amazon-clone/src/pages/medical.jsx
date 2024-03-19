@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for SPA navigation
-import '../styles/medical.css';
+import '../styles/index.css';
 
 function MedicalPage() {
   return (

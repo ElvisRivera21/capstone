@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/clothing.css'; // Make sure the path is correct
-import smileyLogo from '../assets/smiley.svg'; // Adjust path as necessary
-// Import other assets similarly
+import '../styles/index.css';
+import smileyLogo from '../assets/smiley.svg';
+
 
 function Clothing() {
   return (

@@ -8,10 +8,12 @@ import Kids from './pages/kids.jsx';
 import Medical from './pages/medical.jsx';
 import Womens from './pages/womens.jsx';
 import Account from './pages/youraccount.jsx';
+import './styles/index.css';
 
 function AppRoutes() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<Cart />} />

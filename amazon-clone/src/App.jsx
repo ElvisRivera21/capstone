@@ -1,14 +1,10 @@
-import './App.css';
-import Login from './nav/login';
-import RegistrationForm from './nav/register';
+import './styles/index.css';
 import AppRoutes from './Routes';
 
 function App() {
   return (
     <div>
       <AppRoutes />
-      <RegistrationForm />
-      <Login />
     </div>
   );
 }

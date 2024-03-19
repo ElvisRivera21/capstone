@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom';
-import '../styles/youraccount.css';
+import '../styles/index.css';
 import smileyImage from '../../public/smiley.svg'; 
 
 function Account() {

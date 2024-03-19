@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // For SPA navigation
-import '../styles/womens.css'; // Ensure the stylesheet path is correct
+import '../styles/index.css';
 
 function WomensPage() {
   return (

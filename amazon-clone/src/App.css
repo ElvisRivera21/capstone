@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 
 *{
@@ -6,10 +6,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: outfit;
-/*     @media screen {
-      width: 200px;
-      height: 200px;
-    } */
 }
 
 body{
@@ -17,27 +13,26 @@ body{
 }
 
 .pic-container{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 10px; /* Adjust the gap between images */
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Adjust based on your preference */
-  max-width: 600px; /* Maximum width of the container */
-  margin: auto; /* Center the container */
-}
-
-.pic-item{
-  text-align: center; /* Center the text */
-}
-
-.pic-item img{
-  width: 100%; /* Adjust image width */
-  max-width: 250px; /* Maximum width of the image */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the area without losing aspect ratio */
-}
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; 
+    margin: auto; 
+  }
+  
+  .pic-item{
+    text-align: center;
+  }
+  
+  .pic-item img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+  }
 
 a{
     text-decoration: none;
@@ -51,6 +46,13 @@ nav{
     background: #131921;
     padding: 10px 20px;
     color: white;
+}
+
+.header-image{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
 }
 
 .nav-country{
@@ -136,4 +138,4 @@ nav{
     align-items: center;
     gap: 5px;
     font-weight: 500;
-}
+} */

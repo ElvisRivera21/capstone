@@ -1,5 +1,5 @@
-import { addNewItem, removeItem } from "./yourModule"; // Adjust the import path and named exports based on your actual module
-
+import { addNewItem, removeItem } from "./youraccount";
+import '../styles/index.css';
 // Tests for `addNewItem`
 describe("addNewItem", () => {
     let newItem;
