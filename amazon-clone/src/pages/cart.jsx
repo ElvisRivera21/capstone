@@ -1,17 +1,15 @@
-import clothing from "./clothing";
+import { addNewItem, removeItem } from "./yourModule"; // Adjust the import path and named exports based on your actual module
 
-
-// TODO: Tests for `addNewItem`
+// Tests for `addNewItem`
 describe("addNewItem", () => {
     let newItem;
     const itemData = {
         clothing: "clothing",
-        groceries: "",
-        homeImprovements: "",
-        kids: "",
-        medical: "",
-        womens: "",
-        
+        groceries: "fruits",
+        homeImprovements: "paint",
+        kids: "toys",
+        medical: "band-aids",
+        womens: "dresses",
     };
 
     beforeAll(async () => {
@@ -21,20 +19,18 @@ describe("addNewItem", () => {
     test("returns an object", () => {
         expect(typeof newItem).toBe("object");
     });
-    test("new player has expected properties", () => {
-        expect(newItem).toHaveProperty("clothing", itemData.clothing);
-        expect(newItem).toHaveProperty("groceries", itemData.groceries);
-        expect(newItem).toHaveProperty("homeImprovements", itemData.homeImprovements);
-        expect(newItem).toHaveProperty("kids", itemData.kids);
-        expect(newItem).toHaveProperty("medical", itemData.medical);
-        expect(newItem).toHaveProperty("womens", itemData.womens);
+
+    test("new item has expected properties with correct values", () => {
+        Object.keys(itemData).forEach(key => {
+            expect(newItem).toHaveProperty(key, itemData[key]);
+        });
     });
 });
 
-// (Optional) TODO: Tests for `removeItem`
+// Tests for `removeItem`
 describe("removeItem", () => {
     let response;
-    const itemIdToRemove = 2; // Assuming this is a item with ID 2
+    const itemIdToRemove = 2; // Example item ID
 
     beforeAll(async () => {
         response = await removeItem(itemIdToRemove);

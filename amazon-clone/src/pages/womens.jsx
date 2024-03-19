@@ -1,14 +1,14 @@
 import React from 'react';
-import '../styles/womens.css';
+import { Link } from 'react-router-dom'; // For SPA navigation
+import '../styles/womens.css'; // Ensure the stylesheet path is correct
 
-
-function ClothingPage() {
+function WomensPage() {
   return (
-    <>
+    <div>
       <nav>
-        <a href="/home">
+        <Link to="/home">
           <img src="./assets/smiley.svg" width="100" alt="logo" />
-        </a>
+        </Link>
         <div className="nav-country">
           <img src="./assets/location_icon.png" height="20" alt="" />
           <div>
@@ -30,22 +30,25 @@ function ClothingPage() {
           <img src="./assets/dropdown_icon.png" width="8px" alt="" />
         </div>
         <div className="nav-text">
-          <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt="" /></h1>
+          <Link to="/youraccount">
+            <h1>Your Account</h1>
+          </Link>
+          <img src="./assets/dropdown_icon.png" width="8px" alt="" />
         </div>
         <div className="nav-text">
           <h1>Help</h1>
         </div>
-        <a href="/cart" className="nav-cart">
+        <Link to="/cart" className="nav-cart">
           <img src="./assets/cart_icon.png" width="35px" alt="" />
           <h4>Cart</h4>
-        </a>
+        </Link>
       </nav>
 
       <div className="nav-bottom">
         <div>
           <img src="./assets/menu_icon.png" width="25px" alt="" />
         </div>
-        {/* Dropdown menu omitted for brevity */}
+        {/* Dropdown menu links */}
       </div>
 
       <div className="header-slider">
@@ -53,18 +56,17 @@ function ClothingPage() {
       </div>
 
       <div className="deals-container">
-        {/* Example deal */}
         <div className="deal">
           <img src="https://cdnc.lystit.com/photos/d5ab-2015/11/18/jcrew-bright-lemon-perfect-cable-sweater-yellow-product-0-207364279-normal.jpeg" width="300" alt="Crew Yellow Knit Sweater" />
           <h3>Crew Yellow Knit Sweater</h3>
           <img src="https://3.bp.blogspot.com/-DT-3McVrkos/UaaftSIFAdI/AAAAAAAABx4/7j2yOBQ-IP4/s1600/3-stars-out-of-5.png" width="230" alt="Rating" />
           <p>$9.99</p>
-          <a href="product1.jsx">Add To Cart</a>
+          <Link to="product1">Add To Cart</Link>
         </div>
-        {/* More deals omitted for brevity */}
+        {/* Additional deals */}
       </div>
-    </>
+    </div>
   );
 }
 
-export default ClothingPage;
+export default WomensPage;
