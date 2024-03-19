@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/home.css';
+import '../styles/index.css';
 
 // Ensure these paths are correct relative to this file
 import smileyLogo from '../assets/smiley.svg';

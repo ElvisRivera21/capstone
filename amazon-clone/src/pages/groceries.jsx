@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/groceries.css';
-import smileyLogo from '../assets/smiley.svg'; // Ensure the path is correct
+import '../styles/index.css';
+import smileyLogo from '../assets/smiley.svg';
 import locationIcon from '../assets/location_icon.png';
 import searchIcon from '../assets/search_icon.png';
 import usFlag from '../assets/us_flag.png';
 import dropdownIcon from '../assets/dropdown_icon.png';
 import cartIcon from '../assets/cart_icon.png';
-// Add paths for any other assets you're using
+
 
 function GroceriesPage() {
   return (
