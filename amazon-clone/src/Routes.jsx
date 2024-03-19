@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cart from './pages/cart.jsx';
 import Clothing from './pages/clothing.jsx';
 import Groceries from './pages/groceries.jsx';
-import Home from './pages/home.jsx';
-import HomeImprovements from './pages/homeimprov.jsx';
+import HomePage from './pages/home.jsx';
+import HomeImprovements from './pages/homeImprovements.jsx';
 import Kids from './pages/kids.jsx';
 import Medical from './pages/medical.jsx';
 import Womens from './pages/womens.jsx';
@@ -13,7 +13,7 @@ function AppRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/clothing" element={<Clothing />} />
         <Route path="/groceries" element={<Groceries />} />
