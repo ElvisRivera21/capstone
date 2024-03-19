@@ -1,14 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for SPA navigation
 import '../styles/medical.css';
-
 
 function MedicalPage() {
   return (
-    <>
+    <div>
       <nav>
-        <a href="./home.jsx">
+        <Link to="/home">
           <img src="./assets/smiley.svg" width="100" alt="logo" />
-        </a>
+        </Link>
         <div className="nav-country">
           <img src="./assets/location_icon.png" height="20" alt="" />
           <div>
@@ -30,22 +30,26 @@ function MedicalPage() {
           <img src="./assets/dropdown_icon.png" width="8px" alt="" />
         </div>
         <div className="nav-text">
-          <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt="" /></h1>
+          <Link to="/youraccount">
+            <h1>Your Account</h1>
+          </Link>
+          <img src="./assets/dropdown_icon.png" width="8px" alt="" />
         </div>
         <div className="nav-text">
           <h1>Help</h1>
         </div>
-        <a href="" className="nav-cart">
+        <Link to="/cart" className="nav-cart">
           <img src="./assets/cart_icon.png" width="35px" alt="" />
           <h4>Cart</h4>
-        </a>
+        </Link>
       </nav>
 
       <div className="nav-bottom">
         <div>
           <img src="./assets/menu_icon.png" width="25px" alt="" />
         </div>
-        {/* Links abbreviated for brevity */}
+        <Link to="/home">All</Link>
+        {/* More links... */}
       </div>
       
       <div className="header-slider">
@@ -53,16 +57,15 @@ function MedicalPage() {
       </div>
       
       <div className="deals-container">
-        {/* Deal example */}
         <div className="deal">
           <img src="https://m.media-amazon.com/images/I/61UIBbNQb0L._AC_UY327_FMwebp_QL65_.jpg" width="300" alt="" />
           <h3>Fingertip Pulse Oximeter</h3>
           <p><span>$9.99</span></p>
-          <a href="product1.jsx">View Deal</a>
+          <Link to="/product1">View Deal</Link>
         </div>
         {/* More deals... */}
       </div>
-    </>
+    </div>
   );
 }
 

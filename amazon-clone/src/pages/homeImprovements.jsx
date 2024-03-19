@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import '../styles/homeimprov.css';
 
 function HomeImprovementPage() {
   return (
-    <>
+    <div>
       <nav>
-        <a href="/">
+        <Link to="/">
           <img src="./assets/smiley.svg" width="100" alt="logo" />
-        </a>
+        </Link>
         <div className="nav-country">
           <img src="./assets/location_icon.png" height="20" alt="" />
           <div>
-            <p> Deliver to</p>
+            <p>Deliver to</p>
             <h1>United States</h1>
           </div>
         </div>
@@ -29,30 +30,31 @@ function HomeImprovementPage() {
           <img src="./assets/dropdown_icon.png" width="8px" alt="" />
         </div>
         <div className="nav-text">
-          <a href="youraccount.jsx">
+          <Link to="/youraccount">
             <h1>Your Account <img src="./assets/dropdown_icon.png" width="8px" alt="" /></h1>
-          </a>
+          </Link>
         </div>
         <div className="nav-text">
           <h1>Help</h1>
         </div>
-        <a href="" className="nav-cart">
+        <Link to="/cart" className="nav-cart">
           <img src="./assets/cart_icon.png" width="35px" alt="" />
           <h4>Cart</h4>
-        </a>
+        </Link>
       </nav>
       
       <div className="nav-bottom">
         <div>
           <img src="./assets/menu_icon.png" width="25px" alt="" /> 
         </div>
-        <p><a href="home.jsx">All</a></p>
-        {/* More links */}
+        <p><Link to="/home">All</Link></p>
+        {/* More links using <Link> */}
       </div>
       
       <div className="header-slider">
         <video controls>
-          <source src="" type="video/mp4" />
+          {/* Ensure you have a valid source */}
+          <source src="path/to/your/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -63,11 +65,11 @@ function HomeImprovementPage() {
           <img src="https://m.media-amazon.com/images/I/51nBgQabKOL._AC_UL480_QL65_.jpg" width="300" alt="Deal 1" />
           <h3>Cinnado Security Camera Indoor</h3>
           <p><span>$9.99</span></p>
-          <a href="product1.jsx">Add To Cart</a>
+          <Link to="/product1">Add To Cart</Link>
         </div>
         {/* More deals */}
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,120 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="./smiley.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/smiley.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smiley</title>
+    <title>Smiley Capstone</title>
     <link rel="stylesheet" href="./src/App.css">
-
 </head>
+
 <body>
-    <script src="./src/main.jsx"></script>
-<div id="root"></div>
-    <nav>
-        <a href="/">
-        <img src="./smiley.svg" width="100" alt="logo">
+    <script src="./src/App.jsx"></script>
+    <nav> <a href="./src/pages/home.jsx"> <img src="./src/assets/smiley.svg" width="100" alt="logo"> </a>
+        <div class="nav-country"> <img src="./assets/location_icon.png" height="20" alt="">
+            <div>
+                <p> Deliver to</p>
+                <h1>United States</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-category"> <a href="./src/pages/home.jsx"></a>
+                <p>All</p> <img src="./assets/dropdown_icon.png" height="12" alt=""> </a>
+            </div><input type="text" class="nav-search-input" placeholder="Search Smiley"><img
+                src="assets/search_icon.png" class="nav-search-icon" alt="">
+        </div>
+        <div class="nav-language"> <img src="./assets/us_flag.png" width="25px" alt="">
+            <p>US</p> <img src="./assets/dropdown_icon.png" width="8px" alt="">
+        </div>
+        <div class="nav-text"> <a href="./src/pages/youraccount.jsx">
+                <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt=""></h1>
+            </a></div>
+        <div class="nav-text">
+            <h1>Help</h1>
+        </div><a href="" class="nav-cart"> <img src="./assets/cart_icon.png" width="35px" alt="">
+            <h4>Cart</h4>
         </a>
-<div class="nav-country">
-    <img src="./assets/location_icon.png" height="20" alt="">
-    <div>
-        <p> Deliver to</p>
-        <h1>United States</h1>
+    </nav>
+    <div class="nav-bottom">
+        <div> <img src="./assets/menu_icon.png" width="25px" alt="">
+        </div>
+        <p><a href="./src/pages/home.jsx">All</a></p>
+        <p><a href="./src/pages/clothing.jsx">Clothing</a></p>
+        <p><a href="./src/pages/groceries.jsx">Groceries</a></p>
+        <p><a href="./src/pages/medical.jsx">Medical</a></p>
+        <p><a href="./src/pages/homeimprov.jsx">Home Improvement</a></p>
     </div>
-</div>
-<div class="nav-search">
-    <div class="nav-search-category">
-        <p>All</p>
-        <img src="./assets/dropdown_icon.png" height="12" alt="">
-</div>
-<input type="text" class="nav-search-input" placeholder="Search Smiley">
-<img src="assets/search_icon.png"  class="nav-search-icon" alt="">
-</div>
-
-<div class="nav-language">
-    <img src="./assets/us_flag.png" width="25px" alt="">
-    <p>US</p>
-    <img src="./assets/dropdown_icon.png" width="8px" alt="">
-</div>
-<div class="nav-text">
-    <div class="account">
-        <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt="" /></h1>
-<!--Onclick function attempt-->
-    <nav>
+    <div class="header-slider-container">
+        <div class="header-slider"> <img src="https://m.media-amazon.com/images/I/61BYBnNSohL._SX3000_.jpg"
+                class="header-image"> </div>
+    </div>
+    <div class="deals-container">
+        <div class="deal"> <img
+                src="https://cdnc.lystit.com/photos/d5ab-2015/11/18/jcrew-bright-lemon-perfect-cable-sweater-yellow-product-0-207364279-normal.jpeg"
+                width="300">
+            <h4> Essentials Women's Classic-Fit Lightweight Cable Long-Sleeve Mock Neck Sweater</h4> <a
+                href="./src/pages/clothing.jsx">Up to 37% off</a>
+        </div>
+        <div class="deal"> <img src="https://m.media-amazon.com/images/I/71jjExaKxpL._AC_UL480_FMwebp_QL65_.jpg"
+                width="300" alt="placeholder1">
+            <h4>COMOWARE 20V Cordless Drill, Electric Power Drill Set with 1 Battery & Charger, 3/8” Keyless Chuck, 2
+                Variable Speed, 266 In-lb Torque, 25+1 Position and 34pcs Drill/Driver Bits</h4>
+            <p><span></span></p> <a href="./src/pages/homeimprov.jsx">Up to 20% off</a>
+        </div>
+        <div class="deal"> <img src="https://m.media-amazon.com/images/I/81GTm5K1ZXL._AC_UL480_FMwebp_QL65_.jpg"
+                width="300" alt="placeholder2">
+            <h4>vitaminwater power-c electrolyte enhanced water w/ vitamins, dragonfruit drinks, 20 fl oz, 12 Pack</h4>
+            <p><span></span></p> <a href="./src/pages/groceries.jsx">Up to 57% off </a>
+        </div>
+        <div class="deal"> <img src="https://m.media-amazon.com/images/I/718TJdWTfBL._AC_UY327_FMwebp_QL65_.jpg"
+                width="300" alt="placeholder3">
+            <h4>First Aid Only 91248 OSHA-Compliant All-Purpose 50-Person Emergency First Aid Kit for Home, Work, and
+                Travel, 260 Pieces</h4>
+            <p><span></span></p> <a href="./src/pages/medical.jsx">Up to 10% off</a>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="footer-items">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><button onclick="openLogin()">My Account</button></li>
+            <h3>Get to Know Us</h3>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Accesibility</a></li>
+            <li><a href="#">Smiley Science</a></li>
         </ul>
-    </nav>
-
-    <div id="loginForm" style="display: none;">
-        <!-- login form HTML goes here -->
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
-            <button type="submit">Login</button>
-        </form>
-<script src="script.js"></script>
-
+        <ul>
+            <h3>Connect with Us</h3>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+        <ul>
+            <h3>Make Money with Us</h3>
+            <li><a href="#">Sell on Smiley </a></li>
+            <li><a href="#">Start a Package Deliver Buisiness </a></li>
+            <li><a href="#">Protect and Build Your Brand</a></li>
+            <li><a href="#">Smiley Global Selling</a></li>
+            <li><a href="#">Become an Affiliate</a></li>
+            <li><a href="#">Fulfillment by Smiley</a></li>
+            <li><a href="#">Advertise Your Products</a></li>
+            <li><a href="#">Smiley Pay on Merchants</a></li>
+        </ul>
+        <ul>
+            <h3>Let Us Help You</h3>
+            <li><a href="#">COVID-19 and Smiley</a></li>
+            <li><a href="#">Your Account</a></li>
+            <li><a href="#">100% Purchase Protection</a></li>
+            <li><a href="#">Smiley App Download</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
     </div>
-
-
-</div>
-</div>
-<div class="nav-text">
-    <h1>Help</h1>
-</div>
-<a href="" class="nav-cart">
-    <img src="./assets/cart_icon.png" width="35px" alt="">
-    <h4>Cart</h4>
-</a>
-
-    </nav>
-    <div class="pic-container">
-      <div class="pic-item">
-        <h2>Groceries</h2>
-        <img src="./src/assets/groceries.jpg" alt="Groceries" />
-      </div>
-      <div class="pic-item">
-        <h2>Medical</h2>
-        <img src="./src/assets/medical.jpeg" alt="Medical" />
-      </div>
-      <div class="pic-item">
-        <h2>Clothing</h2>
-        <img src="./src/assets/clothes.jpg" alt="Clothing" />
-      </div>
-      <div class="pic-item">
-        <h2>Home Improvement</h2>
-        <img src="./src/assets/drill.jpg" alt="Home Improvement" />
-      </div>
-    </div>
-    
-
-<div class="nav-bottom">
-    <div>
-       <img src="./assets/menu_icon.png" width="25px" alt=""> 
-       <p>All</p>
-    </div>
-    <p>Clothing</p>
-    <p>Groceries</p>
-    <p>Medical</p>
-    <p>Home Improvement</p>
-</div>
-
-<div class="header-slider">
-    <ul>
-        <img src="./assets/header1.jpg"  class="header-img" alt="">
-        <img src="./assets/header2.jpg"  class="header-img" alt="">
-        <img src="./assets/header3.jpg"  class="header-img" alt="">
-        <img src="./assets/header4.jpg"  class="header-img" alt="">
-        <img src="./assets/header5.jpg"  class="header-img" alt="">
-        <img src="./assets/header6.jpg"  class="header-img" alt="">
-    </ul>
-</div>
-
-
-
+    </footer>
 </body>
+
 </html>
