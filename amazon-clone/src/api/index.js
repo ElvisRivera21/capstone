@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { PrismaClient } from '@prisma/client';
 require('dotenv').config();
 
@@ -21,3 +22,10 @@ main()
   .finally(async () => {
     await prisma.$disconnect();
   });
+=======
+const router = require("express").Router();
+
+router.use("/user:id", require("./user:id"));
+
+module.exports = router;
+>>>>>>> feature-d
