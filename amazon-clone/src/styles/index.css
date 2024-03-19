@@ -197,7 +197,8 @@ h2 {
     border-radius: 5px;
     padding: 5px 10px;
     text-decoration: none;
-    border: red;
+    border-style: solid;
+    border-color: red;
 }
 
 .footer-title {
