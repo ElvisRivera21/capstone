@@ -10,7 +10,7 @@ const rootElement = document.getElementById('root');
 // Ensure the root element is present
 if (rootElement) {
   // Create a root
-  const root = ReactDOM.createRoot(rootElement);
+/*   const root = ReactDOM.createRoot(rootElement); */
 
   // Initial render
   root.render(
