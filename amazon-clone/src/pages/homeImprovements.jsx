@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 import '../styles/index.css';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+// Add specific icons to the library
+library.add(faCheckSquare, faCoffee);
+
+// Tell Font Awesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
 
 function HomeImprovementPage() {
   return (
@@ -19,7 +27,7 @@ function HomeImprovementPage() {
         <div className="nav-search">
           <div className="nav-search-category">
             <p>All</p>
-            <img src="./assets/dropdown_icon.png" height="12" alt="" />
+            <i class="fa-solid fa-caret-down"></i>
           </div>
           <input type="text" className="nav-search-input" placeholder="Search Smiley" />
           <img src="./assets/search_icon.png" className="nav-search-icon" alt="" />
@@ -27,25 +35,25 @@ function HomeImprovementPage() {
         <div className="nav-language">
           <img src="./assets/us_flag.png" width="25px" alt="" />
           <p>US</p>
-          <img src="./assets/dropdown_icon.png" width="8px" alt="" />
+          <i class="fa-solid fa-caret-down"></i>
         </div>
         <div className="nav-text">
           <Link to="/youraccount">
-            <h1>Your Account <img src="./assets/dropdown_icon.png" width="8px" alt="" /></h1>
+            <h1>Your Account <i class="fa-solid fa-caret-down"></i></h1>
           </Link>
         </div>
         <div className="nav-text">
           <h1>Help</h1>
         </div>
         <Link to="/cart" className="nav-cart">
-          <img src="./assets/cart_icon.png" width="35px" alt="" />
+        <i class="fa-solid fa-cart-shopping"></i>
           <h4>Cart</h4>
         </Link>
       </nav>
       
       <div className="nav-bottom">
         <div>
-          <img src="./assets/menu_icon.png" width="25px" alt="" /> 
+        <i class="fa-solid fa-bars"></i>
         </div>
         <p><Link to="/home">All</Link></p>
         {/* More links using <Link> */}

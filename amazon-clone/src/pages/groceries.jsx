@@ -2,11 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css';
 import smileyLogo from '../assets/smiley.svg';
-import locationIcon from '../assets/location_icon.png';
-import searchIcon from '../assets/search_icon.png';
-import usFlag from '../assets/us_flag.png';
-import dropdownIcon from '../assets/dropdown_icon.png';
-import cartIcon from '../assets/cart_icon.png';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+// Add specific icons to the library
+library.add(faCheckSquare, faCoffee);
+
+// Tell Font Awesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
 
 
 function GroceriesPage() {
@@ -26,15 +29,15 @@ function GroceriesPage() {
         <div className="nav-search">
           <div className="nav-search-category">
             <p>All</p>
-            <img src={dropdownIcon} height="12" alt="" />
+            <i class="fa-solid fa-caret-down"></i>
           </div>
           <input type="text" className="nav-search-input" placeholder="Search Smiley" />
-          <img src={searchIcon} className="nav-search-icon" alt="" />
+          <i className="fa-solid fa-magnifying-glass"></i>
         </div>
         <div className="nav-language">
-          <img src={usFlag} width="25px" alt="" />
+        <i className="fa-solid fa-flag-usa"></i>
           <p>US</p>
-          <img src={dropdownIcon} width="8px" alt="" />
+          <i class="fa-solid fa-caret-down"></i>
         </div>
         <div className="nav-text">
           <Link to="/account">
@@ -45,13 +48,13 @@ function GroceriesPage() {
           <h1>Help</h1>
         </div>
         <Link to="/cart" className="nav-cart">
-          <img src={cartIcon} width="35px" alt="" />
+        <i class="fa-solid fa-cart-shopping"></i>
           <h4>Cart</h4>
         </Link>
       </nav>
 
       <div className="nav-bottom">
-        <img src="../assets/menu_icon.png" width="25px" alt="" />
+      <i class="fa-solid fa-bars"></i>
         {/* Repeat for each navigation item as needed */}
       </div>
 
