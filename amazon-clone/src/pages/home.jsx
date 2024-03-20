@@ -1,25 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css';
-
-// Ensure these paths are correct relative to this file
 import smileyLogo from '../assets/smiley.svg';
-import locationIcon from '../assets/location_icon.png';
-import dropdownIcon from '../assets/dropdown_icon.png';
-import usFlag from '../assets/us_flag.png';
-import searchIcon from '../assets/search_icon.png';
-import cartIcon from '../assets/cart_icon.png';
-import menuIcon from '../assets/menu_icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationCrosshairs, faCaretDown, faMagnifyingGlass, faFlagUsa, faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
 
 function HomePage() {
+  const [isOpen, setIsOpen] = useState(false); // State to control the visibility of the dropdown menu
+
+  // Function to toggle the dropdown menu's visibility
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
   return (
     <div>
       <nav>
         <Link to="/home">
-          <img src={smileyLogo} width="100" alt="logo" />
+          <img src={smileyLogo} width="100" alt="Smiley Logo" />
         </Link>
         <div className="nav-country">
-          <img src={locationIcon} height="20" alt="" />
+          <FontAwesomeIcon icon={faLocationCrosshairs} />
           <div>
             <p>Deliver to</p>
             <h1>United States</h1>
@@ -28,57 +27,63 @@ function HomePage() {
         <div className="nav-search">
           <div className="nav-search-category">
             <p>All</p>
-            <img src={dropdownIcon} height="12" alt="" />
+            <FontAwesomeIcon icon={faCaretDown} />
           </div>
           <input type="text" className="nav-search-input" placeholder="Search Smiley" />
-          <img src={searchIcon} className="nav-search-icon" alt="" />
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
         </div>
         <div className="nav-language">
-          <img src={usFlag} width="25" alt="" />
+          <FontAwesomeIcon icon={faFlagUsa} />
           <p>US</p>
-          <img src={dropdownIcon} width="8" alt="" />
+          <FontAwesomeIcon icon={faCaretDown} />
         </div>
         <div className="nav-text">
           <Link to="/youraccount">
-            <h1>Your Account <img src={dropdownIcon} width="8" alt="" /></h1>
+            Your Account <FontAwesomeIcon icon={faCaretDown} />
           </Link>
         </div>
         <div className="nav-text">
           <h1>Help</h1>
         </div>
         <Link to="/cart" className="nav-cart">
-          <img src={cartIcon} width="35" alt="" />
+          <FontAwesomeIcon icon={faCartShopping} />
           <h4>Cart</h4>
         </Link>
       </nav>
 
       <div className="nav-bottom">
-        <img src={menuIcon} width="25" alt="" />
-        <Link to="/home">All</Link>
-        <Link to="/clothing">Clothing</Link>
-        <Link to="/groceries">Groceries</Link>
-        <Link to="/medical">Medical</Link>
-        <Link to="/homeimprov">Home Improvement</Link>
+        <FontAwesomeIcon icon={faBars} onClick={toggleDropdown} className="dropdown-icon" />
+        {isOpen && (
+          <div className="dropdown-menu">
+            <Link to="/home">Home</Link>
+            <Link to="/clothing">Clothing</Link>
+            <Link to="/groceries">Groceries</Link>
+            <Link to="/medical">Medical</Link>
+            <Link to="/homeimprov">Home Improvement</Link>
+            {/* Add additional links as needed */}
+          </div>
+        )}
       </div>
 
       <div className="header-slider-container">
         <div className="header-slider">
-          {/* Use the URL directly for external images */}
-          <img src="https://m.media-amazon.com/images/I/61BYBnNSohL._SX3000_.jpg" className="header-image" alt="" />
+          <img src="https://m.media-amazon.com/images/I/61BYBnNSohL._SX3000_.jpg" className="header-image" alt="Header Banner" />
         </div>
       </div>
 
+      {/* Example Deal Section */}
       <div className="deals-container">
         <div className="deal">
           <img src="https://cdnc.lystit.com/photos/d5ab-2015/11/18/jcrew-bright-lemon-perfect-cable-sweater-yellow-product-0-207364279-normal.jpeg" width="300" alt="Deal 1" />
           <h4>Essentials Women's Classic-Fit Lightweight Cable Long-Sleeve Mock Neck Sweater</h4>
           <Link to="/clothing">Up to 37% off</Link>
         </div>
-        {/* Add more deals in similar format */}
+        {/* Add more deals in a similar format */}
       </div>
 
+      {/* Footer Section */}
       <div className="footer-items">
-        {/* Footer Content Here */}
+        {/* Footer content */}
       </div>
     </div>
   );

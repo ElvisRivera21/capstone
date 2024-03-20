@@ -6,39 +6,50 @@
     <link rel="icon" type="image/svg+xml" href="./src/assets/smiley.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smiley Capstone</title>
-    <link rel="stylesheet" href="./src/styles/index.css">
+   <!--  <link rel="stylesheet" href="./src/styles/index.css"> -->
+    <!-- Importing Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <script src="./src/App.jsx"></script>
-    <nav> <a href="./src/pages/home.jsx"> <img src="./src/assets/smiley.svg" width="100" alt="logo"> </a>
-        <div class="nav-country"> <img src="./assets/location_icon.png" height="20" alt="">
-            <div>
-                <p> Deliver to</p>
+    <div id="root"></div>
+    <nav>
+            <a href="./src/pages/home.jsx"><img src="./src/assets/smiley.svg" width="100" alt="logo"></a>
+            <div class="nav-country">
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <div>
+                <p>Deliver to</p>
                 <h1>United States</h1>
+              </div>
             </div>
+            <div class="nav-search">
+              <div class="nav-search-category">
+                <p>All</p>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <input type="text" class="nav-search-input" placeholder="Search Smiley">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="nav-language">
+              <i class="fa-solid fa-flag-usa"></i>
+              <p>US</p>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="nav-text">
+              <a href="./src/pages/youraccount">Your Account</a>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="nav-text">
+              <h1>Help</h1>
         </div>
-        <div class="nav-search">
-            <div class="nav-search-category"> <a href="./src/pages/home.jsx"></a>
-                <p>All</p> <img src="./assets/dropdown_icon.png" height="12" alt=""> </a>
-            </div><input type="text" class="nav-search-input" placeholder="Search Smiley"><img
-                src="assets/search_icon.png" class="nav-search-icon" alt="">
-        </div>
-        <div class="nav-language"> <img src="./assets/us_flag.png" width="25px" alt="">
-            <p>US</p> <img src="./assets/dropdown_icon.png" width="8px" alt="">
-        </div>
-        <div class="nav-text"> <a href="./src/pages/youraccount.jsx">
-                <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt=""></h1>
-            </a></div>
-        <div class="nav-text">
-            <h1>Help</h1>
-        </div><a href="" class="nav-cart"> <img src="./assets/cart_icon.png" width="35px" alt="">
+        <a href="./src/pages/cart" class="nav-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
             <h4>Cart</h4>
-        </a>
-    </nav>
+          </a>
+        </nav>
     <div class="nav-bottom">
-        <div> <img src="./assets/menu_icon.png" width="25px" alt="">
-        </div>
+        <i class="fa-solid fa-bars"></i>
+    </div>
 <!--         <p>All</p>
         <p>Clothing</p>
         <p>Groceries</p>
@@ -53,29 +64,29 @@
         <div class="deal"> <img
                 src="https://cdnc.lystit.com/photos/d5ab-2015/11/18/jcrew-bright-lemon-perfect-cable-sweater-yellow-product-0-207364279-normal.jpeg"
                 width="300">
-            <h4> Essentials Women's Classic-Fit Lightweight Cable Long-Sleeve Mock Neck Sweater</h4> <a
-                href="./src/pages/clothing.jsx">Up to 37% off</a>
+            <h4> Essentials Women's Classic-Fit Lightweight Cable Long-Sleeve Mock Neck Sweater</h4> <a href="./src/pages/groceries.jsx"><p>Up to 37% off</p></a>
         </div>
         <div class="deal"> <img src="https://m.media-amazon.com/images/I/71jjExaKxpL._AC_UL480_FMwebp_QL65_.jpg"
                 width="300" alt="placeholder1">
             <h4>COMOWARE 20V Cordless Drill, Electric Power Drill Set with 1 Battery & Charger, 3/8” Keyless Chuck, 2
                 Variable Speed, 266 In-lb Torque, 25+1 Position and 34pcs Drill/Driver Bits</h4>
-            <p><span></span></p> <a href="./src/pages/homeimprov.jsx">Up to 20% off</a>
+            <p><span></span></p> <a href="./src/pages/homeImprovements.jsx"><p>Up to 20% off</p></a>
         </div>
         <div class="deal"> <img src="https://m.media-amazon.com/images/I/81GTm5K1ZXL._AC_UL480_FMwebp_QL65_.jpg"
                 width="300" alt="placeholder2">
             <h4>vitaminwater power-c electrolyte enhanced water w/ vitamins, dragonfruit drinks, 20 fl oz, 12 Pack</h4>
-            <p><span></span></p> <a href="./src/pages/groceries.jsx">Up to 57% off </a>
+            <p><span></span></p> <a href="./src/pages/groceries.jsx"><p>Up to 57% off </p></a>
         </div>
         <div class="deal"> <img src="https://m.media-amazon.com/images/I/718TJdWTfBL._AC_UY327_FMwebp_QL65_.jpg"
                 width="300" alt="placeholder3">
             <h4>First Aid Only 91248 OSHA-Compliant All-Purpose 50-Person Emergency First Aid Kit for Home, Work, and
                 Travel, 260 Pieces</h4>
-            <p><span></span></p> <a href="./src/pages/medical.jsx">Up to 10% off</a>
+            <p><span></span></p> <a href="./src/pages/medical.jsx"><p>Up to 10% off</p></a>
         </div>
     </div>
     </div>
     </div>
+    <footer>
     <div class="footer-items">
         <ul>
             <h3>Get to Know Us</h3>
@@ -111,6 +122,8 @@
         </ul>
     </div>
     </footer>
+  <!--   <script src="./src/main.jsx"></script> -->
+    <script src="bundle.js"></script>
 </body>
 
 </html>
