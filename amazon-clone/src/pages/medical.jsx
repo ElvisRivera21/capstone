@@ -70,10 +70,15 @@ function MedicalPage() {
           <h3>Fingertip Pulse Oximeter</h3>
           <p><span>$9.99</span></p>
           <Link to="/product1">View Deal</Link>
-        </div>
         {/* More deals... */}
+        <div class="deal"> <img src="https://m.media-amazon.com/images/I/718TJdWTfBL._AC_UY327_FMwebp_QL65_.jpg"
+                width="300" alt="placeholder3" />
+            <h4>First Aid Only 91248 OSHA-Compliant All-Purpose 50-Person Emergency First Aid Kit for Home, Work, and
+                Travel, 260 Pieces</h4>
+        </div>
       </div>
     </div>
+  </div>
   );
 }
 

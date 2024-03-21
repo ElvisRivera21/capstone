@@ -1,15 +1,14 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'main.jsx'),
+  entry: __dirname + 'src' + 'main.jsx',
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: __dirname + 'public',
     publicPath: '/',
     filename: 'bundle.js',
   },
   performance: {
-    maxAssetSize: 500000, // Example size in bytes, adjust as needed
+    maxAssetSize: 500000, // Size in bytes, adjust as needed
     maxEntrypointSize: 500000,
   },
   mode: 'development',
@@ -40,14 +39,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'index.html'),
+      template: __dirname + './index.html',
       filename: 'index.html',
       inject: 'body'
     }),
   ],
   devServer: {
+    historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: __dirname + 'public',
     },
     port: 9000,
     open: true, // This option opens the browser after the server has been started
