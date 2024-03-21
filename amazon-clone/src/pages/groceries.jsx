@@ -14,7 +14,7 @@ dom.watch();
 
 function GroceriesPage() {
   return (
-    <>
+    <div>
       <nav>
         <Link to="/home">
           <img src={smileyLogo} width="100" alt="logo" />
@@ -72,8 +72,18 @@ function GroceriesPage() {
           <Link to="/product1">Add To Cart</Link>
         </div>
         {/* Add more deals here */}
+        <div class="deal"> <img src="https://m.media-amazon.com/images/I/81GTm5K1ZXL._AC_UL480_FMwebp_QL65_.jpg"
+                width="300" alt="placeholder2" />
+            <h4>vitaminwater power-c electrolyte enhanced water w/ vitamins, dragonfruit drinks, 20 fl oz, 12 Pack</h4>
+            <p><span></span></p> <p>Up to 57% off </p>
       </div>
-    </>
+      <div class="deal"> <img
+                src="https://cdnc.lystit.com/photos/d5ab-2015/11/18/jcrew-bright-lemon-perfect-cable-sweater-yellow-product-0-207364279-normal.jpeg"
+                width="300" />
+            <h4> Essentials Women's Classic-Fit Lightweight Cable Long-Sleeve Mock Neck Sweater</h4> <p>Up to 37% off</p>
+        </div>
+    </div>
+    </div>
   );
 }
 

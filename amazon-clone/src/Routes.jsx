@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar.js';
 import './styles/index.css';
 
 // Lazy load the pages
@@ -16,6 +17,7 @@ const Account = React.lazy(() => import('./pages/youraccount.jsx'));
 function AppRoutes() {
   return (
     <Router>
+      <Navbar />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -76,7 +76,13 @@ function HomeImprovementPage() {
           <Link to="/product1">Add To Cart</Link>
         </div>
         {/* More deals */}
+        <div class="deal"> <img src="https://m.media-amazon.com/images/I/71jjExaKxpL._AC_UL480_FMwebp_QL65_.jpg"
+                width="300" alt="placeholder1" />
+            <h4>COMOWARE 20V Cordless Drill, Electric Power Drill Set with 1 Battery & Charger, 3/8” Keyless Chuck, 2
+                Variable Speed, 266 In-lb Torque, 25+1 Position and 34pcs Drill/Driver Bits</h4>
+            <p><span></span></p><p>Up to 20% off</p>
       </div>
+    </div>
     </div>
   );
 }

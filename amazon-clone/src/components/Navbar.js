@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/index.css';
+import AppRoutes from '../Routes.jsx';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const toggleDropdown = (event) => {
+    setIsOpen(!isOpen);
+    event.stopPropagation(); // Prevent event from propagating to parent elements
+  };
 
   // Handle key presses for accessibility
   const handleKeyDown = (event) => {
@@ -13,11 +17,11 @@ function Navbar() {
       toggleDropdown();
     }
   };
-
+//Onclick Function toggleDropdown
   return (
     <nav style={{ padding: '20px', background: '#f0f0f0' }}>
       <div
-        onClick={toggleDropdown}
+        onClick={(event) => toggleDropdown(event)} // Pass the event to toggleDropdown
         onKeyDown={handleKeyDown}
         style={{ cursor: 'pointer' }}
         tabIndex="0" // Make the div focusable
