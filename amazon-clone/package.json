@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "seed": "node prisma/seed.js",
     "dev": "vite",
     "build": "webpack --mode production",
     "start": "webpack serve --open --mode development",
@@ -22,7 +23,7 @@
     "pg-promise": "^11.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.2"
+    "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
     "@babel/core": "^7.24.1",
