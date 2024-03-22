@@ -66,9 +66,7 @@ function HomePage() {
       </div>
 
       <div className="header-slider-container">
-        <div className="header-slider">
-          <img src="https://m.media-amazon.com/images/I/61BYBnNSohL._SX3000_.jpg" className="header-image" alt="Header Banner" />
-        </div>
+        <img src="https://m.media-amazon.com/images/I/61BYBnNSohL._SX3000_.jpg" className="header-image" alt="Header Banner" />
       </div>
 
       {/* Example Deal Section */}

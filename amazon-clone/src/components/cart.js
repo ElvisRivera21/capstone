@@ -1,5 +1,5 @@
 const cohortName = "2310-FSA-ET-WEB-PT-SF-B";
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'http://localhost:5432/api';
 
 const addNewItem = async (itemObj) => {
     try {

@@ -5,7 +5,6 @@ import smiley from '../assets/smiley.svg'; // Import the image
 // Then use it in your JSX
 <img src={smiley} alt="Smiley" />
 
-
 const Cart = () => {
   // Let's assume you have an initial state for cart items
   const [cartItems, setCartItems] = useState([]);

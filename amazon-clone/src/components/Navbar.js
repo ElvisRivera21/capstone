@@ -34,6 +34,7 @@ function Navbar() {
       {isOpen && (
         <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <li><Link to="/">Home</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
           <li><Link to="/clothing">Clothing</Link></li>
           <li><Link to="/groceries">Groceries</Link></li>
           <li><Link to="/homeImprovements">Home Improvements</Link></li>
@@ -41,7 +42,6 @@ function Navbar() {
           <li><Link to="/medical">Medical</Link></li>
           <li><Link to="/womens">Womens</Link></li>
           <li><Link to="/account">Your Account</Link></li>
-          <li><Link to="/cart">Cart</Link></li>
         </ul>
       )}
     </nav>
