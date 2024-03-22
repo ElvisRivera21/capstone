@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkamazon_clone=self.webpackChunkamazon_clone||[]).push([[116],{116:(e,n,a)=>{a.r(n),a.d(n,{default:()=>u}),a(689);var t=a(107),c=a(188);t.Yv.add(c.rQb,c.euM),t.tT.watch();const u=function(){return React.createElement("div",null,"Kids Component")}}}]);
