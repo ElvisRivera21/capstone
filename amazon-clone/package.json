@@ -1,0 +1,62 @@
+{
+  "name": "amazon-clone",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "seed": "node prisma/seed.js",
+    "dev": "vite",
+    "build": "webpack --mode production",
+    "start": "webpack serve --open --mode development",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@prisma/client": "^5.10.2",
+    "bcrypt": "^5.1.1",
+    "esbuild": "^0.20.1",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.11.3",
+    "pg-promise": "^11.5.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.1",
+    "@babel/preset-env": "^7.24.1",
+    "@babel/preset-react": "^7.24.1",
+    "@faker-js/faker": "^8.4.1",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.10.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "express": "^4.18.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "prisma": "^5.10.2",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "description": "This template provides a minimal setup for a React application with Webpack and ESLint.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElvisRivera21/capstone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElvisRivera21/capstone/issues"
+  },
+  "homepage": "https://github.com/ElvisRivera21/capstone#readme"
+}
