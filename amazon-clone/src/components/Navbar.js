@@ -1,51 +1,52 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/index.css';
-import AppRoutes from '../Routes.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faBars, faSearch, faHome } from '@fortawesome/free-solid-svg-icons';
+import '../styles/navbar.css';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const categories = ['All', 'Home Improvement', 'Groceries', 'Clothing']; // Add more categories as needed
 
-  const toggleDropdown = (event) => {
+  const toggleDropdown = () => {
     setIsOpen(!isOpen);
-    event.stopPropagation(); // Prevent event from propagating to parent elements
   };
+  
+  const closeMenu = () => setIsOpen(false);
 
-  // Handle key presses for accessibility
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      toggleDropdown();
-    }
-  };
-//Onclick Function toggleDropdown
+
   return (
-    <nav style={{ padding: '20px', background: '#f0f0f0' }}>
-      <div
-        onClick={(event) => toggleDropdown(event)} // Pass the event to toggleDropdown
-        onKeyDown={handleKeyDown}
-        style={{ cursor: 'pointer' }}
-        tabIndex="0" // Make the div focusable
-        role="button" // Indicate that the div is a button
-        aria-expanded={isOpen} // Accessibility for screen readers
-      >
-        <i className="fas fa-bars"></i> {/* FontAwesome icon for the menu */}
+    <nav className="navbar">
+      <div className="top-section">
+        <Link to="/" className="navbar-logo">
+          <FontAwesomeIcon icon={faHome} size="2x" /> {/* Home icon as a button */}
+        </Link>
+        <div className="menu-icon" onClick={toggleDropdown}>
+          <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x" />
+       
       </div>
-
-      {isOpen && (
-        <ul style={{ listStyleType: 'none', padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/cart">Cart</Link></li>
-          <li><Link to="/clothing">Clothing</Link></li>
-          <li><Link to="/groceries">Groceries</Link></li>
-          <li><Link to="/homeImprovements">Home Improvements</Link></li>
-          <li><Link to="/kids">Kids</Link></li>
-          <li><Link to="/medical">Medical</Link></li>
-          <li><Link to="/womens">Womens</Link></li>
-          <li><Link to="/account">Your Account</Link></li>
-        </ul>
-      )}
-    </nav>
-  );
+      <div className={`dropdown-menu ${isOpen ? 'show' : ''}`}> {/* Toggle 'show' class based on 'isOpen' state */}
+        <Link to="/cart">Cart</Link>
+          <Link to="/clothing">Clothing</Link>
+          <Link to="/groceries">Groceries</Link>
+          <Link to="/medical">Medical</Link>
+          <Link to="/homeimprov">Home Improvement</Link>
+          <Link to="/kids">Kids</Link>
+          <Link to="/youraccount">Your Account</Link>
+          <Link to="/womens">Womens Clothing</Link>
+          <button onClick={closeMenu} className="close-menu">Close</button>
+        </div>
+        </div>
+      <div
+className="nav-links">
+{/* Links can be added here */}
+<Link to="/youraccount">Your Account</Link>
+<Link to="/help">Help</Link>
+<Link to="/cart">Cart</Link>
+</div>
+</nav>
+);
 }
 
 export default Navbar;

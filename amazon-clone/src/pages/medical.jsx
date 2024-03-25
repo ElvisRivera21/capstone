@@ -51,14 +51,6 @@ function MedicalPage() {
           <h4>Cart</h4>
         </Link>
       </nav>
-
-      <div className="nav-bottom">
-        <div>
-        <i class="fa-solid fa-bars"></i>
-        </div>
-        <Link to="/home">All</Link>
-        {/* More links... */}
-      </div>
       
       <div className="header-slider">
         <img src="https://m.media-amazon.com/images/G/01/HST/Hornbill/LandingPage/desktop-image-aModernApproach-2x.jpg" alt="" />

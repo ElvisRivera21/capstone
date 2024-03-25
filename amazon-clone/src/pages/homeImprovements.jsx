@@ -51,17 +51,9 @@ function HomeImprovementPage() {
         </Link>
       </nav>
       
-      <div className="nav-bottom">
-        <div>
-        <i class="fa-solid fa-bars"></i>
-        </div>
-        <p><Link to="/home">All</Link></p>
-        {/* More links using <Link> */}
-      </div>
-      
       <div className="header-slider">
         <video controls>
-          {/* Ensure you have a valid source */}
+          {/* add home improvement video */}
           <source src="path/to/your/video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

@@ -53,11 +53,9 @@ function Clothing() {
         </Link>
       </nav>
       
-      <div className="nav-bottom">
-        {/* Navigation links */}
+ {/*      <div className="nav-bottom">
         <Link to="/all">All</Link>
-        {/* Additional links */}
-      </div>
+      </div> */}
 
       <div className="header-slider">
         {/* Header slider with images */}

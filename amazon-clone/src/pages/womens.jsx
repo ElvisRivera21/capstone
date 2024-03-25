@@ -52,13 +52,6 @@ function WomensPage() {
         </Link>
       </nav>
 
-      <div className="nav-bottom">
-        <div>
-        <i class="fa-solid fa-bars"></i>
-        </div>
-        {/* Dropdown menu links */}
-      </div>
-
       <div className="header-slider">
         <img src="./assets/clothes.jpg" className="header-image" alt="Clothing Header" />
       </div>

@@ -51,20 +51,6 @@ function HomePage() {
         </Link>
       </nav>
 
-      <div className="nav-bottom">
-        <FontAwesomeIcon icon={faBars} onClick={toggleDropdown} className="dropdown-icon" />
-        {isOpen && (
-          <div className="dropdown-menu">
-            <Link to="/home">Home</Link>
-            <Link to="/clothing">Clothing</Link>
-            <Link to="/groceries">Groceries</Link>
-            <Link to="/medical">Medical</Link>
-            <Link to="/homeimprov">Home Improvement</Link>
-            {/* Add additional links as needed */}
-          </div>
-        )}
-      </div>
-
       <div className="header-slider-container">
         <img src="https://m.media-amazon.com/images/I/61BYBnNSohL._SX3000_.jpg" className="header-image" alt="Header Banner" />
       </div>

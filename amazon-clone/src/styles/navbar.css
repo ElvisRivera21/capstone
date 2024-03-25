@@ -1,0 +1,68 @@
+.navbar {
+    background-color: #131921; /* Adjust to match your design */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+  }
+  .show {
+    display: block;
+  }
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #131921;
+    padding: 1rem;
+    z-index: 10;
+  }
+  
+  .dropdown-menu a {
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+  
+  .close-menu {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+/*   
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  .search-container select,
+  .search-container input,
+  .search-container button {
+    margin: 0 0.5rem;
+  } */
+  .navbar-logo {
+    width: 50px; /* or any other size */
+    height: auto; /* maintains the aspect ratio */
+    display: flex;
+    margin-left: 40px;
+    margin-top: -6.5px;
+  }
+  

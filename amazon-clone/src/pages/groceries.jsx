@@ -20,7 +20,6 @@ function GroceriesPage() {
           <img src={smileyLogo} width="100" alt="logo" />
         </Link>
         <div className="nav-country">
-          <img src={locationIcon} height="20" alt="" />
           <div>
             <p>Deliver to</p>
             <h1>United States</h1>
@@ -52,11 +51,6 @@ function GroceriesPage() {
           <h4>Cart</h4>
         </Link>
       </nav>
-
-      <div className="nav-bottom">
-      <i class="fa-solid fa-bars"></i>
-        {/* Repeat for each navigation item as needed */}
-      </div>
 
       <div className="header-slider">
         <img src="https://mainlymiles.com/wp-content/uploads/2018/08/groceries-background-e1533097069889.jpg" className="header-image" alt="Groceries background" />

@@ -44,14 +44,131 @@ a{
     border-radius: 5px;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #131921;
-    padding: 10px 20px;
-    color: white;
+nav {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  background: #131921;
+  color: white;
 }
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0; /* Change to 'right: 0;' if you want it on the right */
+  width: 250px; /* Width of the sidebar */
+  height: 100%;
+  background-color: #131921; /* Sidebar background color */
+  overflow: auto; /* Add scroll if content is larger than the screen */
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Start offscreen */
+}
+
+.nav-menu.active {
+  transform: translateX(0); /* Slide in when active */
+}
+
+/* Adjust the style for the dropdown toggle button */
+.menu-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px; /* Adjust based on the actual layout */
+}
+
+/* The top section of the navbar, containing logo, search, etc. */
+.top-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Space items out */
+  padding: 10px 20px; /* Adjust as necessary */
+}
+
+/* Styles for the dropdown menu */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Set width to match parent */
+  position: absolute;
+  top: 100%; /* Position directly below the navbar */
+  left: 0;
+  background-color: #131921;
+}
+
+/* Make sure dropdown is above other content */
+.dropdown-menu {
+  z-index: 10; 
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+  display: none; 
+}
+
+/* Show dropdown menu when isOpen is true */
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* List styles */
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.dropdown-menu li {
+  text-align: center;
+  padding: 10px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* This class is for your search bar and related elements */
+.search-container {
+  flex-grow: 1; /* Allow it to take up as much space as possible */
+  margin: 0 15px; /* Add some margin to the left and right */
+  display: flex;
+  align-items: center;
+  /* Add additional styling as needed */
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between; /* This spreads the items to either end */
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px; /* Adjust as necessary */
+  position: relative; /* This allows absolute positioning relative to this container */
+}
+
+.nav-links {
+  position: absolute;
+  top: 0;
+  right: 0; /* Align to the top right */
+  display: flex;
+  gap: 10px; /* Space between links */
+  padding: 10px; /* Padding around the link area */
+}
+
+
+/* Individual nav items */
+.nav-item {
+  padding: 5px 10px; /* Add some padding for clickable area */
+  color: white; /* Text color for the items */
+  text-decoration: none; /* Remove underline from links */
+  /* Add additional styling as needed */
+}
+
+/* Hover effect for nav items */
+.nav-item:hover {
+  background-color: #131921; /* Darken background on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
 
 .nav-country{
     display: flex;
@@ -122,7 +239,7 @@ nav{
     margin: 0px 15px;
 
 }
-.nav-bottom{
+/* .nav-bottom{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -136,7 +253,7 @@ nav{
     align-items: center;
     gap: 5px;
     font-weight: 500;
-}
+} */
 
 .header-slider-container {
   width: 100%;
