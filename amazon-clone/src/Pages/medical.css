@@ -148,17 +148,18 @@ h2 {
 
   }
   .deals-container {
-    display flex;
-    float: right;
-    float: right;
+   display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; 
+}
   }  
     .deal {
-    width: calc(25% - 10px); 
-    margin: 5px;
-    background-color: #f9f9f9; 
-    border-radius: 5px; 
+        float: right;
+        width: calc(25% - 5px); 
+        margin-bottom: 2px; 
+        background-color: #f9f9f9; 
+        padding: 20px; 
+        border-radius: 5px; 
 }
 
 .deal img {

@@ -152,14 +152,16 @@ h2 {
 }
 
 .deal {
+    float: right;
     width: calc(25% - 5px); 
-    margin-bottom: 30px; 
+    margin-bottom: 2px; 
     background-color: #f9f9f9; 
     padding: 20px; 
     border-radius: 5px; 
 }
 
 .deal img {
+    margin: 10px;
     max-width: 100%;
     height: auto;
 }
@@ -177,6 +179,7 @@ h2 {
     border-radius: 5px;
 }
 video {
+    max-width: 1000px;
     width: vw; 
     height: 80vh; 
     object-fit: cover; 
