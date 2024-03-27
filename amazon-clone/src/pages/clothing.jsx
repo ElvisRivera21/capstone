@@ -1,86 +1,73 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/index.css';
+import smileyLogo from '../assets/smiley.svg';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+// Add specific icons to the library
+library.add(faCheckSquare, faCoffee);
+
+// Tell Font Awesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
 
 
-function clothing() {
-    return (
-        <>
-            <head>
-                <meta charset="UTF-8"/>
-                <link rel="icon" type="image/svg+xml" href="./src/assets/smiley.svg" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <title>Amazon Capstone</title>
-                <link rel="stylesheet" href="./src/clothing.css"/>
-            </head>
-            <body>
-                <script src="./src/main.jsx"></script>
+function Clothing() {
+  return (
+    <div>
+      <nav>
+        <Link to="/">
+          <img src={smileyLogo} width="100" alt="logo" />
+        </Link>
+        <div className="nav-country">
+          <img src="../assets/location_icon.png" height="20" alt="" />
+          <div>
+            <p>Deliver to</p>
+            <h1>United States</h1>
+          </div>
+        </div>
+        <div className="nav-search">
+          <div className="nav-search-category">
+            <p>All</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <input type="text" className="nav-search-input" placeholder="Search Smiley" />
+          <img src="../assets/search_icon.png" className="nav-search-icon" alt="" />
+        </div>
+        <div className="nav-language">
+          <img src="../assets/us_flag.png" width="25" alt="" />
+          <p>US</p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div className="nav-text">
+          <Link to="/account">
+            <h1>Your Account</h1>
+          </Link>
+        </div>
+        <div className="nav-text">
+          <h1>Help</h1>
+        </div>
+        <Link to="/cart" className="nav-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+          <h4>Cart</h4>
+        </Link>
+      </nav>
+      
+      <div className="nav-bottom">
+        {/* Navigation links */}
+        <Link to="/all">All</Link>
+        {/* Additional links */}
+      </div>
 
-                <nav>
-                    <a href="./home.html">
-                        <img src="./src/assets/smiley.svg" width="100" alt="logo"/>
-                    </a>
-                    <div className="nav-country">
-                        <img src="./assets/location_icon.png" height="20" alt=""/>
-                        <div>
-                            <p>Deliver to</p>
-                            <h1>United States</h1>
-                        </div>
-                    </div>
-                    <div className="nav-search">
-                        <div className="nav-search-category">
-                            <p>All</p>
-                            <img src="./assets/dropdown_icon.png" height="12" alt=""/>
-                        </div>
-                        <input type="text" className="nav-search-input" placeholder="Search Smiley"/>
-                        <img src="./assets/search_icon.png" className="nav-search-icon" alt=""/>
-                    </div>
-                    <div className="nav-language">
-                        <img src="./assets/us_flag.png" width="25px" alt=""/>
-                        <p>US</p>
-                        <img src="./assets/dropdown_icon.png" width="8px" alt=""/>
-                    </div>
-                    <div className="nav-text">
-                        <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt=""/></h1>
-                    </div>
-                    <div className="nav-text">
-                        <h1>Help</h1>
-                    </div>
-                    <a href="#" className="nav-cart">
-                        <img src="./assets/cart_icon.png" width="35px" alt=""/>
-                        <h4>Cart</h4>
-                    </a>
-                </nav>
+      <div className="header-slider">
+        {/* Header slider with images */}
+      </div>
 
-                <div className="nav-bottom">
-                    <div>
-                        <img src="./assets/menu_icon.png" width="25px" alt=""/>
-                    </div>
-                    <div className="dropdown">
-                        <p><a href="home.html">All</a></p>
-                    </div>
-                    <p><a href="clothing.html">Clothing</a></p>
-                    <p><a href="groceries.html">Groceries</a></p>
-                    <p><a href="medical.html">Medical</a></p>
-                    <p><a href="homeimprov.html">Home Improvement</a></p>
-                </div>
-
-                <div className="header-slider">
-                    <ul>
-                        <img src="./src/assets/clothes.jpg" className="header-image" alt=""/>
-                    </ul>
-                </div>
-
-                <div className="deals-container">
-                    <div className="deal">
-                        <img src="https://cdnc.lystit.com/photos/d5ab-2015/11/18/jcrew-bright-lemon-perfect-cable-sweater-yellow-product-0-207364279-normal.jpeg" width="300" alt="Deal 1"/>
-                        <h3>Crew Yellow Knit Sweater</h3>
-                        <img src="https://3.bp.blogspot.com/-DT-3McVrkos/UaaftSIFAdI/AAAAAAAABx4/7j2yOBQ-IP4/s1600/3-stars-out-of-5.png" width="230px" alt=""/>
-                        <p>$9.99</p>
-                        <a href="product1.html">Add To Cart</a>
-                    </div>
-                    {/* Repeat similar structures for other deal items */}
-                </div>
-            </body>
-        </>
-    );
+      <div className="deals-container">
+        {/* Deals and products */}
+      </div>
+    </div>
+  );
 }
 
-export default clothing;
+export default Clothing;

@@ -1,6 +1,14 @@
-import { useHistory } from 'react-router-dom';
-import '../styles/youraccount.css';
+/* import { useHistory } from 'react-router-dom'; */
+import '../styles/index.css';
 import smileyImage from '../../public/smiley.svg'; 
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+// Add specific icons to the library
+library.add(faCheckSquare, faCoffee);
+
+// Tell Font Awesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
 
 function Account() {
   let history = useHistory();
@@ -26,7 +34,7 @@ function Account() {
       <img src={smileyImage} width="200px" alt="Smiley Logo" />
       <div className="nav-text">
     <div className="account">
-        <h1>Your Account<img src="./assets/dropdown_icon.png" width="8px" alt="" /></h1>
+        <h1>Your Account<i class="fa-solid fa-caret-down"></i></h1>
 </div>
 </div>
       <div id="signInBorder">

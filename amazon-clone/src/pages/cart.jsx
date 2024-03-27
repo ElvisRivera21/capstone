@@ -1,3 +1,4 @@
+import clothing from "./clothing";
 
 
 // TODO: Tests for `addNewItem`
@@ -42,4 +43,4 @@ describe("removeItem", () => {
     test("successfully removes item and returns undefined", () => {
         expect(response).toBeUndefined();
     });
-}); 
+});

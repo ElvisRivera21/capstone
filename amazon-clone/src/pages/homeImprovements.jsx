@@ -1,50 +1,90 @@
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
+import '../styles/index.css';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
 
+// Add specific icons to the library
+library.add(faCheckSquare, faCoffee);
 
-const homeimprov = () => {
+// Tell Font Awesome to watch the DOM and add the SVGs when it detects icon markup
+dom.watch();
+
+function HomeImprovementPage() {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="./src/assets/smiley.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Amazon Capstone</title>
-        <link rel="stylesheet" href="./src/home.css" />
-      </head>
-      <body>
-        <script src="./src/main.jsx"></script>
-
-        <nav>
-          <a href="/">
-            <img src="./src/assets/smiley.svg" width="100" alt="logo" />
-          </a>
-          <div className="nav-country">
-            <img src="./assets/location_icon.png" height="20" alt="" />
-            <div>
-              <p>Deliver to</p>
-              <h1>United States</h1>
-            </div>
-          </div>
-          {/* Add the remaining navigation elements here */}
-        </nav>
-
-        <div className="nav-bottom">
+    <div>
+      <nav>
+        <Link to="/">
+          <img src="./assets/smiley.svg" width="100" alt="logo" />
+        </Link>
+        <div className="nav-country">
+          <img src="./assets/location_icon.png" height="20" alt="" />
           <div>
-            <img src="./assets/menu_icon.png" width="25px" alt="" />
+            <p>Deliver to</p>
+            <h1>United States</h1>
           </div>
-          <p><a href="home.html">All</a></p>
-          {/* Add the rest of the bottom navigation links */}
         </div>
-
-        <div className="header-slider">
-          <ul>
-            <img src="https://m.media-amazon.com/images/I/61qCI1mfDdL._SX3000_.jpg" className="header-image" alt="" />
-          </ul>
+        <div className="nav-search">
+          <div className="nav-search-category">
+            <p>All</p>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <input type="text" className="nav-search-input" placeholder="Search Smiley" />
+          <img src="./assets/search_icon.png" className="nav-search-icon" alt="" />
         </div>
-
-        {/* Add the deals-container and deal components here */}
-      </body>
-    </html>
+        <div className="nav-language">
+          <img src="./assets/us_flag.png" width="25px" alt="" />
+          <p>US</p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div className="nav-text">
+          <Link to="/youraccount">
+            <h1>Your Account <i class="fa-solid fa-caret-down"></i></h1>
+          </Link>
+        </div>
+        <div className="nav-text">
+          <h1>Help</h1>
+        </div>
+        <Link to="/cart" className="nav-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+          <h4>Cart</h4>
+        </Link>
+      </nav>
+      
+      <div className="nav-bottom">
+        <div>
+        <i class="fa-solid fa-bars"></i>
+        </div>
+        <p><Link to="/home">All</Link></p>
+        {/* More links using <Link> */}
+      </div>
+      
+      <div className="header-slider">
+        <video controls>
+          {/* Ensure you have a valid source */}
+          <source src="path/to/your/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div className="deals-container">
+        {/* Deal 1 */}
+        <div className="deal">
+          <img src="https://m.media-amazon.com/images/I/51nBgQabKOL._AC_UL480_QL65_.jpg" width="300" alt="Deal 1" />
+          <h3>Cinnado Security Camera Indoor</h3>
+          <p><span>$9.99</span></p>
+          <Link to="/product1">Add To Cart</Link>
+        </div>
+        {/* More deals */}
+        <div class="deal"> <img src="https://m.media-amazon.com/images/I/71jjExaKxpL._AC_UL480_FMwebp_QL65_.jpg"
+                width="300" alt="placeholder1" />
+            <h4>COMOWARE 20V Cordless Drill, Electric Power Drill Set with 1 Battery & Charger, 3/8” Keyless Chuck, 2
+                Variable Speed, 266 In-lb Torque, 25+1 Position and 34pcs Drill/Driver Bits</h4>
+            <p><span></span></p><p>Up to 20% off</p>
+      </div>
+    </div>
+    </div>
   );
-};
+}
 
-export default homeimprov;
+export default HomeImprovementPage;

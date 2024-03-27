@@ -1,16 +1,16 @@
-
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './App.css'
-import './index.css';
-import './App.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './styles/index.css';
+import App from './App';
 
 const rootElement = document.getElementById('root');
+
+// Check if rootElement is not null
 if (rootElement) {
-  ReactDOM.createRoot(rootElement).render(
+  const root = ReactDOM.createRoot(rootElement);
+  
+  root.render(
     <React.StrictMode>
-      
       <App />
     </React.StrictMode>
   );
