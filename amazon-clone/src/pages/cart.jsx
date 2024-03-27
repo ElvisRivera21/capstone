@@ -1,9 +1,4 @@
-import clothing from "./clothing";
-import groceries from "./groceries";
-import homeImprovements from "./homeImprovements";
-import kids from "./kids";
-import medical from "./medical";
-import womens from "./womens";
+
 
 // TODO: Tests for `addNewItem`
 describe("addNewItem", () => {
