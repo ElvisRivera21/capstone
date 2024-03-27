@@ -1,52 +1,46 @@
-import React, { useState } from 'react';
-import '../styles/index.css';
-import smiley from '../assets/smiley.svg'; // Import the image
+import clothing from "./clothing";
 
-// Then use it in your JSX
-<img src={smiley} alt="Smiley" />
 
-const Cart = () => {
-  // Let's assume you have an initial state for cart items
-  const [cartItems, setCartItems] = useState([]);
-
-  // Function to add new item to the cart
-  const addNewItem = (itemData) => {
-    // Create a new item with unique id
-    const newItem = {
-      id: Math.random(), // In real app, you'd want a more reliable way to generate unique IDs
-      ...itemData
+// TODO: Tests for `addNewItem`
+describe("addNewItem", () => {
+    let newItem;
+    const itemData = {
+        clothing: "clothing",
+        groceries: "",
+        homeImprovements: "",
+        kids: "",
+        medical: "",
+        womens: "",
+        
     };
 
-    // Update state with new item added
-    setCartItems([...cartItems, newItem]);
-  };
+    beforeAll(async () => {
+        newItem = await addNewItem(itemData);
+    });
 
-  // Function to remove an item from the cart
-  const removeItem = (itemId) => {
-    // Filter out the item to be removed
-    const updatedCartItems = cartItems.filter(item => item.id !== itemId);
+    test("returns an object", () => {
+        expect(typeof newItem).toBe("object");
+    });
+    test("new player has expected properties", () => {
+        expect(newItem).toHaveProperty("clothing", itemData.clothing);
+        expect(newItem).toHaveProperty("groceries", itemData.groceries);
+        expect(newItem).toHaveProperty("homeImprovements", itemData.homeImprovements);
+        expect(newItem).toHaveProperty("kids", itemData.kids);
+        expect(newItem).toHaveProperty("medical", itemData.medical);
+        expect(newItem).toHaveProperty("womens", itemData.womens);
+    });
+});
 
-    // Update state with the item removed
-    setCartItems(updatedCartItems);
-  };
+// (Optional) TODO: Tests for `removeItem`
+describe("removeItem", () => {
+    let response;
+    const itemIdToRemove = 2; // Assuming this is a item with ID 2
 
-  // UI rendering for the cart, including add and remove buttons
-  return (
-    <div>
-      <h2>Your Cart</h2>
-      <ul>
-        {cartItems.map(item => (
-          <li key={item.id}>
-            {item.name} - {item.price}
-            <button onClick={() => removeItem(item.id)}>Remove</button>
-          </li>
-        ))}
-      </ul>
-      {/* Example buttons to add items */}
-      <button onClick={() => addNewItem({ name: 'T-shirt', price: 20 })}>Add T-shirt</button>
-      <button onClick={() => addNewItem({ name: 'Pants', price: 40 })}>Add Pants</button>
-    </div>
-  );
-};
+    beforeAll(async () => {
+        response = await removeItem(itemIdToRemove);
+    });
 
-export default Cart;
+    test("successfully removes item and returns undefined", () => {
+        expect(response).toBeUndefined();
+    });
+});
