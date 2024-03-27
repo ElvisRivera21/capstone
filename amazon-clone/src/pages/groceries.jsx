@@ -28,7 +28,7 @@ function GroceriesPage() {
         <div className="nav-search">
           <div className="nav-search-category">
             <p>All</p>
-            <i class="fa-solid fa-caret-down"></i>
+            <i className="fa-solid fa-caret-down"></i>
           </div>
           <input type="text" className="nav-search-input" placeholder="Search Smiley" />
           <i className="fa-solid fa-magnifying-glass"></i>
@@ -36,18 +36,10 @@ function GroceriesPage() {
         <div className="nav-language">
         <i className="fa-solid fa-flag-usa"></i>
           <p>US</p>
-          <i class="fa-solid fa-caret-down"></i>
-        </div>
-        <div className="nav-text">
-          <Link to="/account">
-            <h1>Your Account</h1>
-          </Link>
-        </div>
-        <div className="nav-text">
-          <h1>Help</h1>
+          <i className="fa-solid fa-caret-down"></i>
         </div>
         <Link to="/cart" className="nav-cart">
-        <i class="fa-solid fa-cart-shopping"></i>
+        <i className="fa-solid fa-cart-shopping"></i>
           <h4>Cart</h4>
         </Link>
       </nav>
@@ -66,12 +58,12 @@ function GroceriesPage() {
           <Link to="/product1">Add To Cart</Link>
         </div>
         {/* Add more deals here */}
-        <div class="deal"> <img src="https://m.media-amazon.com/images/I/81GTm5K1ZXL._AC_UL480_FMwebp_QL65_.jpg"
+        <div className="deal"> <img src="https://m.media-amazon.com/images/I/81GTm5K1ZXL._AC_UL480_FMwebp_QL65_.jpg"
                 width="300" alt="placeholder2" />
             <h4>vitaminwater power-c electrolyte enhanced water w/ vitamins, dragonfruit drinks, 20 fl oz, 12 Pack</h4>
             <p><span></span></p> <p>Up to 57% off </p>
       </div>
-      <div class="deal"> <img
+      <div className="deal"> <img
                 src="https://cdnc.lystit.com/photos/d5ab-2015/11/18/jcrew-bright-lemon-perfect-cable-sweater-yellow-product-0-207364279-normal.jpeg"
                 width="300" />
             <h4> Essentials Women's Classic-Fit Lightweight Cable Long-Sleeve Mock Neck Sweater</h4> <p>Up to 37% off</p>

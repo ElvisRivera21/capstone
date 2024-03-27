@@ -46,8 +46,8 @@ a{
 
 nav {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center items horizontally */
+  flex-direction:row; /* Stack elements vertically */
+  align-items: bottom; /* Center items horizontally */
   background: #131921;
   color: white;
 }
